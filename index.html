@@ -2,12 +2,22 @@
 
 <html>
 <head>
-	<title>HCI Design Portfolio</title>	
+	<title>HCI Design Portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/introHCI.css" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110190648-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110190648-1');
+</script>
+
 </head>
 
 <body>
@@ -22,7 +32,7 @@
 <!-- remember to put Handlebars templates within script tags
 	 so that the webpage doesn't attempt to load them as HTML -->
 <script id="entry-template" type="text/x-handlebars-template">
-		
+
 		<!-- this is the project div to create the grid variation for -->
 		<div class="project" id="project{{index}}">
 			<a href="#" class="thumbnail">
