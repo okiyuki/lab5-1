@@ -4,7 +4,9 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript">
 		localStorage.setItem("grid", "true");
-		$.get("template.html", function (data) {
+
+		// lines below render page.html
+		$.get("page.html", function (data) {
 			document.open();
 			document.write(data);
 			document.close();

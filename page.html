@@ -49,25 +49,27 @@
 	 so that the webpage doesn't attempt to load them as HTML -->
 <script id="entry-template" type="text/x-handlebars-template">
 
-
 	{{#if grid}}
-	 <span class="together">
+
+		<span class="together">
 			<img src="{{profilePic}}" class="grid">
 			<button class="likeBtn">Like</button>
-	 </span>
+		</span>
+
 	{{else}}
-			<!-- this is the project div to create the grid variation for -->
-			<div class="project" id="project{{index}}">
-				<a href="#" class="thumbnail">
-					<img src="{{profilePic}}" alt="Lorem Pixel image" class="img">
-					<p>{{title}}</p>
-					<div class="like"><button class="btn btn-default likeBtn">Like</button></div>
-				</a>
-			</div>
+
+		<!-- this is the project div to create the grid variation for -->
+		<div class="project" id="project{{index}}">
+			<a href="#" class="thumbnail">
+				<img src="{{profilePic}}" alt="Lorem Pixel image" class="img">
+				<p>{{title}}</p>
+				<div class="like"><button class="btn btn-default likeBtn">Like</button></div>
+			</a>
+		</div>
+
 	{{/if}}
+
 </script>
-
-
 
 		<div id="templatedProjects">
 			<!-- don't touch this: templated project HTML code injected here -->
@@ -80,4 +82,5 @@
 	<script src="js/handlebars-v4.0.11.js"></script>
 	<script src="js/lab5.js"></script>
 </body>
+
 </html>
