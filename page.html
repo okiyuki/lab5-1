@@ -2,24 +2,25 @@
 
 <html>
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110190648-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-110190648-1');
+	</script>
+	<script src="https://code.jquery.com/jquery.js"></script> <script type="text/javascript"> localStorage.setItem("showAlternate", "true");
+	 $.get("page.html", function (data) { document.open(); document.write(data); document.close(); $.cache = {}; }, "text");
+	</script>
+
 	<title>HCI Design Portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/introHCI.css" rel="stylesheet">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110190648-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-110190648-1');
-</script>
-<script src="https://code.jquery.com/jquery.js"></script> <script type="text/javascript"> localStorage.setItem("showAlternate", "true");
- $.get("page.html", function (data) { document.open(); document.write(data); document.close(); $.cache = {}; }, "text");
-</script>
 </head>
 
 <body>
@@ -35,28 +36,25 @@
 	 so that the webpage doesn't attempt to load them as HTML -->
 <script id="entry-template" type="text/x-handlebars-template">
 
-		<!-- this is the project div to create the grid variation for -->
-		<div class="project" id="project{{index}}">
-			<a href="#" class="thumbnail">
-				<img src="{{profilePic}}" alt="Lorem Pixel image" class="img">
-				<p>{{title}}</p>
-				<div class="like"><button class="btn btn-default likeBtn">Like</button></div>
-			</a>
-		</div>
 
+	{{#if showAlternate}}
+	 <span class="together">
+			<img src="{{profilePic}}" class="grid">
+			<button class="likeBtn">Like</button>
+	 </span>
+	{{else}}
+			<!-- this is the project div to create the grid variation for -->
+			<div class="project" id="project{{index}}">
+				<a href="#" class="thumbnail">
+					<img src="{{profilePic}}" alt="Lorem Pixel image" class="img">
+					<p>{{title}}</p>
+					<div class="like"><button class="btn btn-default likeBtn">Like</button></div>
+				</a>
+			</div>
+	{{/if}}
 </script>
 
-<button>
-{{#if showAlternate}}
- You should sign up for Intro to HCI now!!!
- <span class="together">
-		<img src="{{profilePic}}" class="grid">
-		<button class="likeBtn">Like</button>
-</span>
-{{else}}
- Please sign up for Intro to HCI soon.
-{{/if}}
-</button>
+
 
 		<div id="templatedProjects">
 			<!-- don't touch this: templated project HTML code injected here -->

@@ -60,7 +60,8 @@ $(document).ready(function() {
 	// so that it will be registered once the page has been loaded
 	$(".likeBtn").click(function(){
 		console.log("like button clicked");
-		tracker.send('event', 'like','click'); 
+		tracker = ga.getAll()[0];
+		tracker.send('event', 'like','click');
 	})
 });
 
